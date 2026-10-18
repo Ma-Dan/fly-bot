@@ -1,0 +1,31 @@
+# fly-bot — Q1 Lite 蜘蛛四足 + ESP32-C3 舵机驱动
+#
+# 安装:
+#   conda create -n fly python=3.10
+#   conda activate fly
+#   pip install -r requirements.txt
+#
+# 主入口在 Apple Silicon 上用 mjpython 运行:
+#   mjpython fly_embodied_q1lite.py --servo --servo-host <esp32_ip>
+
+# ── MuJoCo 仿真 ──────────────────────────────────────────────────
+mujoco==3.2.7
+numpy==2.0.2
+
+# ── 大脑（PyTorch 后端，默认）────────────────────────────────────
+torch==2.14.0
+pandas==2.3.3
+pyarrow==25.0.1
+
+# ── 大脑（MLX 后端，--mlx；仅 Apple Silicon）─────────────────────
+mlx==0.31.2; sys_platform == "darwin" and platform_machine == "arm64"
+
+# ── 脑活动监视器（--monitor，pygame 窗口）────────────────────────
+pygame==2.6.1
+
+# ── ESP32 固件工具链（esp32_servo_stream/）───────────────────────
+# 编译并烧录 PCA9685 舵机固件:
+#   cd esp32_servo_stream
+#   pio run -t upload          # 编译 + 烧录（首次会下载 pioarduino 工具链）
+#   pio device monitor         # 串口监视器 115200，读 ESP32 IP
+platformio==6.2.0
