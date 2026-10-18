@@ -15,6 +15,10 @@ MuJoCo 仿真与实机同步：关节指令以 50Hz 经 WiFi 流式发送到 ESP
 
 实机行走演示 / Walking demo
 
+https://github.com/user-attachments/assets/3b3bf7e6-23a7-410c-9b3d-bff030634024
+
+
+
 ```
 Mac (Apple Silicon)                          Robot
 ┌──────────────────────────┐                ┌─────────────────────┐
