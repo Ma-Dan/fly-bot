@@ -13,8 +13,6 @@ a PCA9685 over I2C. The brain sees, smells, tastes, feels — and walks.
 MuJoCo 仿真与实机同步：关节指令以 50Hz 经 WiFi 流式发送到 ESP32-C3，
 由 PCA9685 驱动 8 个舵机。大脑能看、能闻、能尝、能触——还能走。
 
-<video src="video/demo.mp4" controls muted playsinline width="100%"></video>
-
 实机行走演示 / Walking demo
 
 ```
@@ -50,7 +48,7 @@ section 4. First build downloads the pioarduino platform automatically.
 
 ## 3. 硬件成本与接线 / Hardware Cost & Wiring
 
-### 3.1 成本 Cost (不含舵机 / servos excluded)
+### 3.1 成本 Cost
 
 | 部件 Part | 价格 Price |
 |---|---|
@@ -59,10 +57,8 @@ section 4. First build downloads the pioarduino platform automatically.
 | UBEC 电源模块（6A）Power module | ~¥30 |
 | PCA9685 16 路 PWM 舵机驱动板 Servo driver | ~¥15 |
 | ESP32-C3-DevKitM-1 | ~¥50 |
-| **合计 Total** | **~¥161** |
-
-另需 Q1 Lite 套件的 8 × MG90D 舵机。
-Also needs 8 × MG90D servos from the Q1 Lite kit.
+| MG90D 舵机 ×8 Servos | ~¥50 |
+| **合计 Total** | **~¥211** |
 
 ### 3.2 接线图 Wiring
 
